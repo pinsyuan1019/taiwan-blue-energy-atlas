@@ -16,9 +16,12 @@ https://pinsyuan1019.github.io/taiwan-blue-energy-atlas/
 - Four location-based Changhua coastal scenarios
 - Field hotspots for turbines, vessels, fisheries, ports, cables, and ecology
 - Built-in energy guide for common questions
+- Licensed real-world photographs for offshore wind, fisheries, ports, and marine ecology
 
 ## Distribution Notice
 
 This public repository contains only the optimized website distribution build. The maintainable development source, project notes, and source history are kept in a private repository.
 
 Except for clearly identified third-party libraries and data sources under their own terms, the project content is all rights reserved. No license is granted to reproduce or redistribute the project code.
+
+Field-image credits and licenses are listed in `assets/field/ATTRIBUTIONS.md` and linked from each scene inside the website.
