@@ -28,8 +28,9 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: requirements-data.txt
       - name: Install data dependencies
-        run: python -m pip install pandas==2.2.3 pyarrow==19.0.0 requests==2.32.3
+        run: python -m pip install -r requirements-data.txt
       - name: Download and normalize official CSV data
         run: python scripts/update_energy_data.py
       - name: Validate JSON and Parquet artifacts
