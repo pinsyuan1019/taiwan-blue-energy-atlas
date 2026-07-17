@@ -7,4 +7,4 @@ These photographs are used inside the real-world scene panels of the Taiwan Blue
 - `taichung-port.jpg` — Mnb, "Taiwan Taichung Port", CC BY-SA 3.0. Source: https://commons.wikimedia.org/wiki/File:Taiwan_Taichung_Port.jpg
 - `sousa-chinensis.jpg` — Leonard Reback, "Chinese white dolphin", CC BY-SA 4.0. The photograph was taken off Lantau Island, Hong Kong and is used only as a species reference. Source: https://commons.wikimedia.org/wiki/File:Chinese_white_dolphin.jpg
 
-The photographs remain under their original licenses. Cropping performed by CSS does not change the source files.
+The photographs remain under their original licenses. The `.webp` files are display-sized, quality-optimized derivatives of the corresponding credited `.jpg` originals; cropping performed by CSS does not change their attribution requirements.
