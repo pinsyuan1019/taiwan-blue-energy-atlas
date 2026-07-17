@@ -18,7 +18,7 @@ https://pinsyuan1019.github.io/taiwan-blue-energy-atlas/
 - Field hotspots for turbines, vessels, fisheries, ports, cables, and ecology
 - Responsive three-state field-story sheet with 44 px touch targets
 - Local SVG icon subset and display-sized WebP field photographs
-- Free-form AI energy guide with linked sources
+- Free-form Taiwan-energy AI guide with linked sources and off-topic prompt blocking
 - Licensed real-world photographs for offshore wind, fisheries, ports, and marine ecology
 - Weekly official-data refresh from MOEA Energy Administration and Taiwan Power Company CSV files
 - Validated browser JSON and an Apache Parquet analytical dataset
