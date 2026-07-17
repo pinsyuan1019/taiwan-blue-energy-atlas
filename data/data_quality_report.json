@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-07-17T04:59:56Z",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "monthly_record_count",
+      "status": "passed",
+      "detail": "233 monthly rows"
+    },
+    {
+      "name": "annual_record_count",
+      "status": "passed",
+      "detail": "21 annual rows"
+    },
+    {
+      "name": "monthly_freshness",
+      "status": "passed",
+      "detail": "latest 2026-05"
+    },
+    {
+      "name": "monthly_total_reconciles",
+      "status": "passed",
+      "detail": "difference 0.000000 GWh"
+    },
+    {
+      "name": "monthly_renewables_reconcile",
+      "status": "passed",
+      "detail": "difference 0.000000 GWh"
+    },
+    {
+      "name": "annual_renewables_reconcile",
+      "status": "passed",
+      "detail": "difference 0.000000 GWh"
+    },
+    {
+      "name": "offshore_within_wind_total",
+      "status": "passed",
+      "detail": "offshore 10288.721 / total 12203.288 GWh"
+    },
+    {
+      "name": "taipower_latest_period",
+      "status": "passed",
+      "detail": "latest 2026-05"
+    }
+  ],
+  "parquet_rows": 5299
+}

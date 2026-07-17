@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-07-17T04:59:56Z",
+  "sources": [
+    {
+      "id": "generation_monthly",
+      "title": "經濟部能源署－發電量月資料",
+      "dataset_url": "https://data.gov.tw/dataset/112650",
+      "download_url": "https://www.moeaea.gov.tw/ECW/populace/opendata/wHandOpenData_File.ashx?set_id=171",
+      "frequency": "每月",
+      "license": "政府資料開放授權條款－第1版",
+      "sha256": "1fefcace69af9fefcda01047aeb0b61109d65b5a51cc3d220ebbf9da90d20359",
+      "bytes": 128862,
+      "rows": 233,
+      "latest_record": "2026-05"
+    },
+    {
+      "id": "renewable_annual",
+      "title": "經濟部能源署－再生能源發電量年資料",
+      "dataset_url": "https://data.gov.tw/en/datasets/163720",
+      "download_url": "https://www.moeaea.gov.tw/ECW/populace/opendata/wHandOpenData_File.ashx?set_id=248",
+      "frequency": "每年",
+      "license": "政府資料開放授權條款－第1版",
+      "sha256": "8d1eadbfe5224f53a28e5adb7d57f97b720854ea6cf40da71cfd837aaf6398de",
+      "bytes": 3407,
+      "rows": 21,
+      "latest_record": "2025"
+    },
+    {
+      "id": "taipower_wind_solar",
+      "title": "台灣電力公司－自建風力與太陽光電發電量",
+      "dataset_url": "https://data.gov.tw/en/datasets/17140",
+      "download_url": "https://service.taipower.com.tw/data/opendata/apply/file/d693001/001.csv",
+      "frequency": "每月",
+      "license": "政府資料開放授權條款－第1版",
+      "sha256": "c84c88bdc06edda15359ea03a7d015346cceffade7d3864002679539bb3e4587",
+      "bytes": 155158,
+      "rows": 1848,
+      "latest_record": "2026-05"
+    }
+  ]
+}

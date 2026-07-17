@@ -17,6 +17,8 @@ https://pinsyuan1019.github.io/taiwan-blue-energy-atlas/
 - Field hotspots for turbines, vessels, fisheries, ports, cables, and ecology
 - Built-in energy guide for common questions
 - Licensed real-world photographs for offshore wind, fisheries, ports, and marine ecology
+- Weekly official-data refresh from MOEA Energy Administration and Taiwan Power Company CSV files
+- Validated browser JSON and an Apache Parquet analytical dataset
 
 ## Distribution Notice
 
@@ -25,3 +27,5 @@ This public repository contains only the optimized website distribution build. T
 Except for clearly identified third-party libraries and data sources under their own terms, the project content is all rights reserved. No license is granted to reproduce or redistribute the project code.
 
 Field-image credits and licenses are listed in `assets/field/ATTRIBUTIONS.md` and linked from each scene inside the website.
+
+Official data provenance and quality checks are available under `data/`. The public repository includes only the small data-refresh scripts required to keep the judge website current; the maintainable application source remains private.

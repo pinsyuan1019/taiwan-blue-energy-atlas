@@ -1,0 +1,56 @@
+name: Refresh official data and deploy Pages
+
+on:
+  schedule:
+    - cron: "45 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-data-refresh"
+  cancel-in-progress: false
+
+jobs:
+  refresh-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout public distribution
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install data dependencies
+        run: python -m pip install pandas==2.2.3 pyarrow==19.0.0 requests==2.32.3
+      - name: Download and normalize official CSV data
+        run: python scripts/update_energy_data.py
+      - name: Validate JSON and Parquet artifacts
+        run: python scripts/validate_energy_data.py
+      - name: Commit refreshed public data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "Official data is unchanged."
+          else
+            git commit -m "data: refresh official energy snapshot"
+            git push
+          fi
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload refreshed site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: "."
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
