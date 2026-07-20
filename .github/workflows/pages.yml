@@ -16,6 +16,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.repository == 'pinsyuan1019/taiwan-blue-energy-atlas'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
