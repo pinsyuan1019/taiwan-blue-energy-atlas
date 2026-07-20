@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T20:07:03Z",
+  "generated_at": "2026-07-20T20:41:18Z",
   "status": "passed",
   "checks": [
     {
@@ -43,25 +43,31 @@
       "detail": "latest 2026-05"
     },
     {
-      "name": "keelung_full_year",
+      "name": "county_count",
       "status": "passed",
-      "detail": "12 months"
+      "detail": "22 counties and cities"
     },
     {
-      "name": "keelung_district_count",
+      "name": "county_full_year",
       "status": "passed",
-      "detail": "7 districts"
+      "detail": "all county records contain 12 months"
     },
     {
-      "name": "keelung_sales_positive",
+      "name": "county_district_count",
       "status": "passed",
-      "detail": "1552.188413 GWh"
+      "detail": "368 districts"
     },
     {
-      "name": "keelung_selected_rows",
+      "name": "county_sales_positive",
       "status": "passed",
-      "detail": "84 monthly district rows"
+      "detail": "national county sales sum 240486.709928 GWh"
+    },
+    {
+      "name": "county_selected_rows",
+      "status": "passed",
+      "detail": "4416 monthly district rows"
     }
   ],
-  "parquet_rows": 5306
+  "parquet_rows": 5321,
+  "d1_records": 734
 }

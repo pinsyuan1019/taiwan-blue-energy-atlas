@@ -51,23 +51,26 @@ def main() -> None:
     if 2025 not in annual_generation or annual_generation[2025].get("months") != 12:
         raise SystemExit("Complete 2025 national generation total is missing")
     city_rows = snapshot.get("city_electricity_sales", [])
-    if len(city_rows) != 1 or city_rows[0].get("scope") != "基隆市" or city_rows[0].get("months") != 12:
-        raise SystemExit("Complete Keelung city electricity sales record is missing")
-    parquet_keelung = frame.loc[
+    if len(city_rows) != 22 or any(row.get("months") != 12 for row in city_rows):
+        raise SystemExit("Complete 22-county electricity sales records are missing")
+    parquet_counties = frame.loc[
         (frame["dataset_id"] == "township_sales_2025")
         & (frame["period"] == "2025")
         & (frame["metric"] == "sales_total"),
         "value_gwh",
     ]
-    if len(parquet_keelung) != 7:
-        raise SystemExit("Expected seven Keelung district sales rows in Parquet")
-    if abs(float(parquet_keelung.sum()) - float(city_rows[0]["total"])) > 1e-6:
-        raise SystemExit("JSON and Parquet Keelung electricity sales differ")
+    if len(parquet_counties) != 22:
+        raise SystemExit("Expected 22 county sales rows in Parquet")
+    if abs(float(parquet_counties.sum()) - sum(float(row["total"]) for row in city_rows)) > 1e-6:
+        raise SystemExit("JSON and Parquet county electricity sales differ")
+    d1_seed = args.data_dir / "d1_energy_seed.sql"
+    if not d1_seed.exists() or d1_seed.read_text(encoding="utf-8").count("INSERT INTO energy_records") != int(report.get("d1_records", -1)):
+        raise SystemExit("D1 seed record count does not match the quality report")
 
     print(
         f"Validated {len(frame):,} Parquet rows, latest month {snapshot['latest_month']['period']}, "
-        f"{latest_year} offshore wind {json_offshore:,.3f} GWh, and "
-        f"2025 Keelung sales {float(city_rows[0]['total']):,.3f} GWh."
+        f"{latest_year} offshore wind {json_offshore:,.3f} GWh, "
+        f"22 county sales records, and {report['d1_records']:,} D1 records."
     )
 
 

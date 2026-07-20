@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-20T20:07:03Z",
+  "generated_at": "2026-07-20T20:41:18Z",
   "display_note": "數據由官方 CSV 自動整理；空間圖示仍為議題導覽，不代表工程邊界。",
   "latest_month": {
     "period": "2026-05",
@@ -163,42 +163,2085 @@
   "city_electricity_sales": [
     {
       "year": 2025,
+      "scope": "臺北市",
+      "unit": "GWh",
+      "total": 16161.017573,
+      "district_count": 12,
+      "districts": [
+        {
+          "postal_code": "100",
+          "name": "中正區",
+          "sales_gwh": 1440.868645
+        },
+        {
+          "postal_code": "103",
+          "name": "大同區",
+          "sales_gwh": 747.283228
+        },
+        {
+          "postal_code": "104",
+          "name": "中山區",
+          "sales_gwh": 2010.475856
+        },
+        {
+          "postal_code": "105",
+          "name": "松山區",
+          "sales_gwh": 1193.392863
+        },
+        {
+          "postal_code": "106",
+          "name": "大安區",
+          "sales_gwh": 2038.135855
+        },
+        {
+          "postal_code": "108",
+          "name": "萬華區",
+          "sales_gwh": 776.239531
+        },
+        {
+          "postal_code": "110",
+          "name": "信義區",
+          "sales_gwh": 1537.913699
+        },
+        {
+          "postal_code": "111",
+          "name": "士林區",
+          "sales_gwh": 1189.240984
+        },
+        {
+          "postal_code": "112",
+          "name": "北投區",
+          "sales_gwh": 1209.424803
+        },
+        {
+          "postal_code": "114",
+          "name": "內湖區",
+          "sales_gwh": 2003.104847
+        },
+        {
+          "postal_code": "115",
+          "name": "南港區",
+          "sales_gwh": 1108.11591
+        },
+        {
+          "postal_code": "116",
+          "name": "文山區",
+          "sales_gwh": 906.821352
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
       "scope": "基隆市",
       "unit": "GWh",
       "total": 1552.188413,
+      "district_count": 7,
       "districts": [
         {
-          "name": "七堵區",
-          "sales_gwh": 284.916217
-        },
-        {
-          "name": "中山區",
-          "sales_gwh": 190.965165
-        },
-        {
-          "name": "中正區",
-          "sales_gwh": 242.604495
-        },
-        {
+          "postal_code": "200",
           "name": "仁愛區",
           "sales_gwh": 190.142367
         },
         {
+          "postal_code": "201",
           "name": "信義區",
           "sales_gwh": 173.593936
         },
         {
+          "postal_code": "202",
+          "name": "中正區",
+          "sales_gwh": 242.604495
+        },
+        {
+          "postal_code": "203",
+          "name": "中山區",
+          "sales_gwh": 190.965165
+        },
+        {
+          "postal_code": "204",
           "name": "安樂區",
           "sales_gwh": 351.227237
         },
         {
+          "postal_code": "205",
           "name": "暖暖區",
           "sales_gwh": 118.738996
+        },
+        {
+          "postal_code": "206",
+          "name": "七堵區",
+          "sales_gwh": 284.916217
         }
       ],
       "months": 12,
-      "selected_rows": 84,
-      "definition": "七個行政區每月『總計（含臨時用電）』售電度數加總"
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "新北市",
+      "unit": "GWh",
+      "total": 22483.413336,
+      "district_count": 29,
+      "districts": [
+        {
+          "postal_code": "207",
+          "name": "萬里",
+          "sales_gwh": 88.396499
+        },
+        {
+          "postal_code": "208",
+          "name": "金山",
+          "sales_gwh": 89.32995
+        },
+        {
+          "postal_code": "220",
+          "name": "板橋",
+          "sales_gwh": 2341.544206
+        },
+        {
+          "postal_code": "221",
+          "name": "汐止",
+          "sales_gwh": 1322.409858
+        },
+        {
+          "postal_code": "222",
+          "name": "深坑",
+          "sales_gwh": 118.665184
+        },
+        {
+          "postal_code": "223",
+          "name": "石碇",
+          "sales_gwh": 29.072483
+        },
+        {
+          "postal_code": "224",
+          "name": "瑞芳",
+          "sales_gwh": 240.132509
+        },
+        {
+          "postal_code": "226",
+          "name": "平溪",
+          "sales_gwh": 12.992953
+        },
+        {
+          "postal_code": "227",
+          "name": "雙溪",
+          "sales_gwh": 44.946425
+        },
+        {
+          "postal_code": "228",
+          "name": "貢寮",
+          "sales_gwh": 54.760698
+        },
+        {
+          "postal_code": "231",
+          "name": "新店",
+          "sales_gwh": 1594.298025
+        },
+        {
+          "postal_code": "232",
+          "name": "坪林",
+          "sales_gwh": 41.690822
+        },
+        {
+          "postal_code": "233",
+          "name": "烏來",
+          "sales_gwh": 19.137821
+        },
+        {
+          "postal_code": "234",
+          "name": "永和",
+          "sales_gwh": 681.605814
+        },
+        {
+          "postal_code": "235",
+          "name": "中和",
+          "sales_gwh": 2198.138713
+        },
+        {
+          "postal_code": "236",
+          "name": "土城",
+          "sales_gwh": 1292.617943
+        },
+        {
+          "postal_code": "237",
+          "name": "三峽",
+          "sales_gwh": 638.619038
+        },
+        {
+          "postal_code": "238",
+          "name": "樹林",
+          "sales_gwh": 1646.794579
+        },
+        {
+          "postal_code": "239",
+          "name": "鶯歌",
+          "sales_gwh": 646.983444
+        },
+        {
+          "postal_code": "241",
+          "name": "三重",
+          "sales_gwh": 1711.936021
+        },
+        {
+          "postal_code": "242",
+          "name": "新莊",
+          "sales_gwh": 2208.373564
+        },
+        {
+          "postal_code": "243",
+          "name": "泰山",
+          "sales_gwh": 1323.268677
+        },
+        {
+          "postal_code": "244",
+          "name": "林口",
+          "sales_gwh": 840.225485
+        },
+        {
+          "postal_code": "247",
+          "name": "蘆洲",
+          "sales_gwh": 673.277503
+        },
+        {
+          "postal_code": "248",
+          "name": "五股",
+          "sales_gwh": 938.242544
+        },
+        {
+          "postal_code": "249",
+          "name": "八里",
+          "sales_gwh": 423.390276
+        },
+        {
+          "postal_code": "251",
+          "name": "淡水",
+          "sales_gwh": 1118.123671
+        },
+        {
+          "postal_code": "252",
+          "name": "三芝",
+          "sales_gwh": 113.509724
+        },
+        {
+          "postal_code": "253",
+          "name": "石門",
+          "sales_gwh": 30.928907
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "連江縣",
+      "unit": "GWh",
+      "total": 87.087028,
+      "district_count": 4,
+      "districts": [
+        {
+          "postal_code": "209",
+          "name": "南竿",
+          "sales_gwh": 51.54481
+        },
+        {
+          "postal_code": "210",
+          "name": "北竿",
+          "sales_gwh": 13.839481
+        },
+        {
+          "postal_code": "211",
+          "name": "莒光",
+          "sales_gwh": 6.905365
+        },
+        {
+          "postal_code": "212",
+          "name": "東引",
+          "sales_gwh": 14.797372
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "宜蘭縣",
+      "unit": "GWh",
+      "total": 3606.812682,
+      "district_count": 12,
+      "districts": [
+        {
+          "postal_code": "260",
+          "name": "宜蘭",
+          "sales_gwh": 510.532205
+        },
+        {
+          "postal_code": "261",
+          "name": "頭城",
+          "sales_gwh": 167.460319
+        },
+        {
+          "postal_code": "262",
+          "name": "礁溪",
+          "sales_gwh": 304.835273
+        },
+        {
+          "postal_code": "263",
+          "name": "壯圍",
+          "sales_gwh": 91.280225
+        },
+        {
+          "postal_code": "264",
+          "name": "員山",
+          "sales_gwh": 172.409343
+        },
+        {
+          "postal_code": "265",
+          "name": "羅東",
+          "sales_gwh": 291.621021
+        },
+        {
+          "postal_code": "266",
+          "name": "三星",
+          "sales_gwh": 109.513676
+        },
+        {
+          "postal_code": "267",
+          "name": "大同",
+          "sales_gwh": 17.224599
+        },
+        {
+          "postal_code": "268",
+          "name": "五結",
+          "sales_gwh": 362.112023
+        },
+        {
+          "postal_code": "269",
+          "name": "冬山",
+          "sales_gwh": 570.115079
+        },
+        {
+          "postal_code": "270",
+          "name": "蘇澳",
+          "sales_gwh": 911.702106
+        },
+        {
+          "postal_code": "272",
+          "name": "南澳",
+          "sales_gwh": 98.006813
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "新竹市",
+      "unit": "GWh",
+      "total": 11835.030234,
+      "district_count": 1,
+      "districts": [
+        {
+          "postal_code": "300",
+          "name": "新竹市",
+          "sales_gwh": 11835.030234
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "新竹縣",
+      "unit": "GWh",
+      "total": 10705.583346,
+      "district_count": 13,
+      "districts": [
+        {
+          "postal_code": "302",
+          "name": "竹北",
+          "sales_gwh": 1939.261627
+        },
+        {
+          "postal_code": "303",
+          "name": "湖口",
+          "sales_gwh": 3526.280823
+        },
+        {
+          "postal_code": "304",
+          "name": "新豐",
+          "sales_gwh": 971.18423
+        },
+        {
+          "postal_code": "305",
+          "name": "新埔",
+          "sales_gwh": 339.22587
+        },
+        {
+          "postal_code": "306",
+          "name": "關西",
+          "sales_gwh": 147.627947
+        },
+        {
+          "postal_code": "307",
+          "name": "芎林",
+          "sales_gwh": 154.456185
+        },
+        {
+          "postal_code": "308",
+          "name": "寶山",
+          "sales_gwh": 2946.057713
+        },
+        {
+          "postal_code": "310",
+          "name": "竹東",
+          "sales_gwh": 539.518384
+        },
+        {
+          "postal_code": "311",
+          "name": "五峰",
+          "sales_gwh": 10.259441
+        },
+        {
+          "postal_code": "312",
+          "name": "橫山",
+          "sales_gwh": 69.854865
+        },
+        {
+          "postal_code": "313",
+          "name": "尖石",
+          "sales_gwh": 20.55557
+        },
+        {
+          "postal_code": "314",
+          "name": "北埔",
+          "sales_gwh": 24.144538
+        },
+        {
+          "postal_code": "315",
+          "name": "峨眉",
+          "sales_gwh": 17.156153
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "桃園市",
+      "unit": "GWh",
+      "total": 30420.572162,
+      "district_count": 13,
+      "districts": [
+        {
+          "postal_code": "320",
+          "name": "中壢",
+          "sales_gwh": 4520.688078
+        },
+        {
+          "postal_code": "324",
+          "name": "平鎮",
+          "sales_gwh": 1741.936118
+        },
+        {
+          "postal_code": "325",
+          "name": "龍潭",
+          "sales_gwh": 2766.707366
+        },
+        {
+          "postal_code": "326",
+          "name": "楊梅",
+          "sales_gwh": 2392.849101
+        },
+        {
+          "postal_code": "327",
+          "name": "新屋",
+          "sales_gwh": 878.355285
+        },
+        {
+          "postal_code": "328",
+          "name": "觀音",
+          "sales_gwh": 3374.310908
+        },
+        {
+          "postal_code": "330",
+          "name": "桃園",
+          "sales_gwh": 2685.456297
+        },
+        {
+          "postal_code": "333",
+          "name": "龜山",
+          "sales_gwh": 5271.565872
+        },
+        {
+          "postal_code": "334",
+          "name": "八德",
+          "sales_gwh": 1347.995517
+        },
+        {
+          "postal_code": "335",
+          "name": "大溪",
+          "sales_gwh": 626.503364
+        },
+        {
+          "postal_code": "336",
+          "name": "復興",
+          "sales_gwh": 26.832884
+        },
+        {
+          "postal_code": "337",
+          "name": "大園",
+          "sales_gwh": 1791.869199
+        },
+        {
+          "postal_code": "338",
+          "name": "蘆竹",
+          "sales_gwh": 2995.502173
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "苗栗縣",
+      "unit": "GWh",
+      "total": 7991.267273,
+      "district_count": 18,
+      "districts": [
+        {
+          "postal_code": "350",
+          "name": "竹南",
+          "sales_gwh": 3502.831598
+        },
+        {
+          "postal_code": "351",
+          "name": "頭份",
+          "sales_gwh": 903.91374
+        },
+        {
+          "postal_code": "352",
+          "name": "三灣",
+          "sales_gwh": 24.725921
+        },
+        {
+          "postal_code": "353",
+          "name": "南庄",
+          "sales_gwh": 28.661521
+        },
+        {
+          "postal_code": "354",
+          "name": "獅潭",
+          "sales_gwh": 12.154021
+        },
+        {
+          "postal_code": "356",
+          "name": "後龍",
+          "sales_gwh": 177.577776
+        },
+        {
+          "postal_code": "357",
+          "name": "通霄",
+          "sales_gwh": 316.64922
+        },
+        {
+          "postal_code": "358",
+          "name": "苑裡",
+          "sales_gwh": 225.794787
+        },
+        {
+          "postal_code": "360",
+          "name": "苗栗",
+          "sales_gwh": 921.307275
+        },
+        {
+          "postal_code": "361",
+          "name": "造橋",
+          "sales_gwh": 146.354707
+        },
+        {
+          "postal_code": "362",
+          "name": "頭屋",
+          "sales_gwh": 48.287513
+        },
+        {
+          "postal_code": "363",
+          "name": "公館",
+          "sales_gwh": 94.01374
+        },
+        {
+          "postal_code": "364",
+          "name": "大湖",
+          "sales_gwh": 39.721934
+        },
+        {
+          "postal_code": "365",
+          "name": "泰安",
+          "sales_gwh": 35.415609
+        },
+        {
+          "postal_code": "366",
+          "name": "銅鑼",
+          "sales_gwh": 802.269468
+        },
+        {
+          "postal_code": "367",
+          "name": "三義",
+          "sales_gwh": 182.762994
+        },
+        {
+          "postal_code": "368",
+          "name": "西湖",
+          "sales_gwh": 478.706895
+        },
+        {
+          "postal_code": "369",
+          "name": "卓蘭",
+          "sales_gwh": 50.118554
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "臺中市",
+      "unit": "GWh",
+      "total": 35296.349635,
+      "district_count": 29,
+      "districts": [
+        {
+          "postal_code": "400",
+          "name": "中區",
+          "sales_gwh": 191.102314
+        },
+        {
+          "postal_code": "401",
+          "name": "東區",
+          "sales_gwh": 403.251677
+        },
+        {
+          "postal_code": "402",
+          "name": "南區",
+          "sales_gwh": 548.75207
+        },
+        {
+          "postal_code": "403",
+          "name": "西區",
+          "sales_gwh": 674.199715
+        },
+        {
+          "postal_code": "404",
+          "name": "北區",
+          "sales_gwh": 871.641291
+        },
+        {
+          "postal_code": "406",
+          "name": "北屯區",
+          "sales_gwh": 1359.514654
+        },
+        {
+          "postal_code": "407",
+          "name": "西屯區",
+          "sales_gwh": 8525.003988
+        },
+        {
+          "postal_code": "408",
+          "name": "南屯區",
+          "sales_gwh": 1846.419919
+        },
+        {
+          "postal_code": "411",
+          "name": "太平",
+          "sales_gwh": 1098.34444
+        },
+        {
+          "postal_code": "412",
+          "name": "大里",
+          "sales_gwh": 1034.498666
+        },
+        {
+          "postal_code": "413",
+          "name": "霧峰",
+          "sales_gwh": 560.610339
+        },
+        {
+          "postal_code": "414",
+          "name": "烏日",
+          "sales_gwh": 680.490079
+        },
+        {
+          "postal_code": "420",
+          "name": "豐原",
+          "sales_gwh": 782.471433
+        },
+        {
+          "postal_code": "421",
+          "name": "后里",
+          "sales_gwh": 5103.432175
+        },
+        {
+          "postal_code": "422",
+          "name": "石岡",
+          "sales_gwh": 63.395561
+        },
+        {
+          "postal_code": "423",
+          "name": "東勢",
+          "sales_gwh": 132.806091
+        },
+        {
+          "postal_code": "424",
+          "name": "和平",
+          "sales_gwh": 59.858494
+        },
+        {
+          "postal_code": "426",
+          "name": "新社",
+          "sales_gwh": 114.379478
+        },
+        {
+          "postal_code": "427",
+          "name": "潭子",
+          "sales_gwh": 1249.779958
+        },
+        {
+          "postal_code": "428",
+          "name": "大雅",
+          "sales_gwh": 4014.684532
+        },
+        {
+          "postal_code": "429",
+          "name": "神岡",
+          "sales_gwh": 604.97476
+        },
+        {
+          "postal_code": "432",
+          "name": "大肚",
+          "sales_gwh": 436.899056
+        },
+        {
+          "postal_code": "433",
+          "name": "沙鹿",
+          "sales_gwh": 582.882673
+        },
+        {
+          "postal_code": "434",
+          "name": "龍井",
+          "sales_gwh": 1276.759399
+        },
+        {
+          "postal_code": "435",
+          "name": "梧棲",
+          "sales_gwh": 1545.680184
+        },
+        {
+          "postal_code": "436",
+          "name": "清水",
+          "sales_gwh": 596.398264
+        },
+        {
+          "postal_code": "437",
+          "name": "大甲",
+          "sales_gwh": 674.868776
+        },
+        {
+          "postal_code": "438",
+          "name": "外埔",
+          "sales_gwh": 166.121928
+        },
+        {
+          "postal_code": "439",
+          "name": "大安",
+          "sales_gwh": 97.127721
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "彰化縣",
+      "unit": "GWh",
+      "total": 11907.665706,
+      "district_count": 26,
+      "districts": [
+        {
+          "postal_code": "500",
+          "name": "彰化",
+          "sales_gwh": 1164.32513
+        },
+        {
+          "postal_code": "502",
+          "name": "芬園",
+          "sales_gwh": 84.089803
+        },
+        {
+          "postal_code": "503",
+          "name": "花壇",
+          "sales_gwh": 336.440898
+        },
+        {
+          "postal_code": "504",
+          "name": "秀水",
+          "sales_gwh": 251.847272
+        },
+        {
+          "postal_code": "505",
+          "name": "鹿港",
+          "sales_gwh": 1579.367701
+        },
+        {
+          "postal_code": "506",
+          "name": "福興",
+          "sales_gwh": 391.32789
+        },
+        {
+          "postal_code": "507",
+          "name": "線西",
+          "sales_gwh": 1800.887622
+        },
+        {
+          "postal_code": "508",
+          "name": "和美",
+          "sales_gwh": 981.447758
+        },
+        {
+          "postal_code": "509",
+          "name": "伸港",
+          "sales_gwh": 937.998486
+        },
+        {
+          "postal_code": "510",
+          "name": "員林",
+          "sales_gwh": 575.404285
+        },
+        {
+          "postal_code": "511",
+          "name": "社頭",
+          "sales_gwh": 178.144144
+        },
+        {
+          "postal_code": "512",
+          "name": "永靖",
+          "sales_gwh": 123.155166
+        },
+        {
+          "postal_code": "513",
+          "name": "埔心",
+          "sales_gwh": 209.646593
+        },
+        {
+          "postal_code": "514",
+          "name": "溪湖",
+          "sales_gwh": 272.214837
+        },
+        {
+          "postal_code": "515",
+          "name": "大村",
+          "sales_gwh": 343.417424
+        },
+        {
+          "postal_code": "516",
+          "name": "埔鹽",
+          "sales_gwh": 168.648011
+        },
+        {
+          "postal_code": "520",
+          "name": "田中",
+          "sales_gwh": 184.086395
+        },
+        {
+          "postal_code": "521",
+          "name": "北斗",
+          "sales_gwh": 260.298752
+        },
+        {
+          "postal_code": "522",
+          "name": "田尾",
+          "sales_gwh": 91.166429
+        },
+        {
+          "postal_code": "523",
+          "name": "埤頭",
+          "sales_gwh": 226.997918
+        },
+        {
+          "postal_code": "524",
+          "name": "溪州",
+          "sales_gwh": 165.372148
+        },
+        {
+          "postal_code": "525",
+          "name": "竹塘",
+          "sales_gwh": 76.967358
+        },
+        {
+          "postal_code": "526",
+          "name": "二林",
+          "sales_gwh": 446.125628
+        },
+        {
+          "postal_code": "527",
+          "name": "大城",
+          "sales_gwh": 134.729789
+        },
+        {
+          "postal_code": "528",
+          "name": "芳苑",
+          "sales_gwh": 846.253144
+        },
+        {
+          "postal_code": "530",
+          "name": "二水",
+          "sales_gwh": 77.305125
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "南投縣",
+      "unit": "GWh",
+      "total": 2908.179386,
+      "district_count": 13,
+      "districts": [
+        {
+          "postal_code": "540",
+          "name": "南投",
+          "sales_gwh": 1177.18789
+        },
+        {
+          "postal_code": "541",
+          "name": "中寮",
+          "sales_gwh": 25.520531
+        },
+        {
+          "postal_code": "542",
+          "name": "草屯",
+          "sales_gwh": 436.156398
+        },
+        {
+          "postal_code": "544",
+          "name": "國姓",
+          "sales_gwh": 53.697395
+        },
+        {
+          "postal_code": "545",
+          "name": "埔里",
+          "sales_gwh": 452.807258
+        },
+        {
+          "postal_code": "546",
+          "name": "仁愛",
+          "sales_gwh": 58.836898
+        },
+        {
+          "postal_code": "551",
+          "name": "名間",
+          "sales_gwh": 151.652724
+        },
+        {
+          "postal_code": "552",
+          "name": "集集",
+          "sales_gwh": 52.206949
+        },
+        {
+          "postal_code": "553",
+          "name": "水里",
+          "sales_gwh": 57.40777
+        },
+        {
+          "postal_code": "555",
+          "name": "魚池",
+          "sales_gwh": 111.280211
+        },
+        {
+          "postal_code": "556",
+          "name": "信義",
+          "sales_gwh": 29.654801
+        },
+        {
+          "postal_code": "557",
+          "name": "竹山",
+          "sales_gwh": 247.039957
+        },
+        {
+          "postal_code": "558",
+          "name": "鹿谷",
+          "sales_gwh": 54.730604
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "嘉義市",
+      "unit": "GWh",
+      "total": 1224.009009,
+      "district_count": 1,
+      "districts": [
+        {
+          "postal_code": "600",
+          "name": "嘉義市",
+          "sales_gwh": 1224.009009
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "嘉義縣",
+      "unit": "GWh",
+      "total": 3231.259976,
+      "district_count": 18,
+      "districts": [
+        {
+          "postal_code": "602",
+          "name": "番路",
+          "sales_gwh": 43.845502
+        },
+        {
+          "postal_code": "603",
+          "name": "梅山",
+          "sales_gwh": 62.624318
+        },
+        {
+          "postal_code": "604",
+          "name": "竹崎",
+          "sales_gwh": 95.458182
+        },
+        {
+          "postal_code": "605",
+          "name": "阿里山",
+          "sales_gwh": 21.281577
+        },
+        {
+          "postal_code": "606",
+          "name": "中埔",
+          "sales_gwh": 150.941747
+        },
+        {
+          "postal_code": "607",
+          "name": "大埔",
+          "sales_gwh": 18.037914
+        },
+        {
+          "postal_code": "608",
+          "name": "水上",
+          "sales_gwh": 254.281399
+        },
+        {
+          "postal_code": "611",
+          "name": "鹿草",
+          "sales_gwh": 122.462111
+        },
+        {
+          "postal_code": "612",
+          "name": "太保",
+          "sales_gwh": 429.668453
+        },
+        {
+          "postal_code": "613",
+          "name": "朴子",
+          "sales_gwh": 267.132795
+        },
+        {
+          "postal_code": "614",
+          "name": "東石",
+          "sales_gwh": 91.865213
+        },
+        {
+          "postal_code": "615",
+          "name": "六腳",
+          "sales_gwh": 75.69012
+        },
+        {
+          "postal_code": "616",
+          "name": "新港",
+          "sales_gwh": 114.594181
+        },
+        {
+          "postal_code": "621",
+          "name": "民雄",
+          "sales_gwh": 808.922518
+        },
+        {
+          "postal_code": "622",
+          "name": "大林",
+          "sales_gwh": 411.765654
+        },
+        {
+          "postal_code": "623",
+          "name": "溪口",
+          "sales_gwh": 59.266702
+        },
+        {
+          "postal_code": "624",
+          "name": "義竹",
+          "sales_gwh": 93.430237
+        },
+        {
+          "postal_code": "625",
+          "name": "布袋",
+          "sales_gwh": 109.991353
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "雲林縣",
+      "unit": "GWh",
+      "total": 5943.344055,
+      "district_count": 20,
+      "districts": [
+        {
+          "postal_code": "630",
+          "name": "斗南",
+          "sales_gwh": 220.292871
+        },
+        {
+          "postal_code": "631",
+          "name": "大埤",
+          "sales_gwh": 96.805993
+        },
+        {
+          "postal_code": "632",
+          "name": "虎尾",
+          "sales_gwh": 567.960616
+        },
+        {
+          "postal_code": "633",
+          "name": "土庫",
+          "sales_gwh": 196.716723
+        },
+        {
+          "postal_code": "634",
+          "name": "褒忠",
+          "sales_gwh": 101.216207
+        },
+        {
+          "postal_code": "635",
+          "name": "東勢",
+          "sales_gwh": 60.096962
+        },
+        {
+          "postal_code": "636",
+          "name": "臺西",
+          "sales_gwh": 97.780499
+        },
+        {
+          "postal_code": "637",
+          "name": "崙背",
+          "sales_gwh": 119.617501
+        },
+        {
+          "postal_code": "638",
+          "name": "麥寮",
+          "sales_gwh": 253.345246
+        },
+        {
+          "postal_code": "640",
+          "name": "斗六",
+          "sales_gwh": 2779.690081
+        },
+        {
+          "postal_code": "643",
+          "name": "林內",
+          "sales_gwh": 112.671329
+        },
+        {
+          "postal_code": "646",
+          "name": "古坑",
+          "sales_gwh": 125.211435
+        },
+        {
+          "postal_code": "647",
+          "name": "莿桐",
+          "sales_gwh": 168.091774
+        },
+        {
+          "postal_code": "648",
+          "name": "西螺",
+          "sales_gwh": 277.199828
+        },
+        {
+          "postal_code": "649",
+          "name": "二崙",
+          "sales_gwh": 112.056921
+        },
+        {
+          "postal_code": "651",
+          "name": "北港",
+          "sales_gwh": 159.23237
+        },
+        {
+          "postal_code": "652",
+          "name": "水林",
+          "sales_gwh": 97.757642
+        },
+        {
+          "postal_code": "653",
+          "name": "口湖",
+          "sales_gwh": 126.795678
+        },
+        {
+          "postal_code": "654",
+          "name": "四湖",
+          "sales_gwh": 93.223231
+        },
+        {
+          "postal_code": "655",
+          "name": "元長",
+          "sales_gwh": 177.581148
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "臺南市",
+      "unit": "GWh",
+      "total": 33771.269505,
+      "district_count": 38,
+      "districts": [
+        {
+          "postal_code": "700",
+          "name": "中西區",
+          "sales_gwh": 567.888749
+        },
+        {
+          "postal_code": "701",
+          "name": "東區",
+          "sales_gwh": 944.924654
+        },
+        {
+          "postal_code": "702",
+          "name": "南區",
+          "sales_gwh": 663.6543
+        },
+        {
+          "postal_code": "703",
+          "name": "西區",
+          "sales_gwh": 0.0
+        },
+        {
+          "postal_code": "704",
+          "name": "北區",
+          "sales_gwh": 542.608308
+        },
+        {
+          "postal_code": "708",
+          "name": "安平區",
+          "sales_gwh": 384.51678
+        },
+        {
+          "postal_code": "709",
+          "name": "安南區",
+          "sales_gwh": 1637.012501
+        },
+        {
+          "postal_code": "710",
+          "name": "永康",
+          "sales_gwh": 2236.485895
+        },
+        {
+          "postal_code": "711",
+          "name": "歸仁",
+          "sales_gwh": 482.643999
+        },
+        {
+          "postal_code": "712",
+          "name": "新化",
+          "sales_gwh": 219.248167
+        },
+        {
+          "postal_code": "713",
+          "name": "左鎮",
+          "sales_gwh": 11.395402
+        },
+        {
+          "postal_code": "714",
+          "name": "玉井",
+          "sales_gwh": 44.292049
+        },
+        {
+          "postal_code": "715",
+          "name": "楠西",
+          "sales_gwh": 28.091889
+        },
+        {
+          "postal_code": "716",
+          "name": "南化",
+          "sales_gwh": 20.944438
+        },
+        {
+          "postal_code": "717",
+          "name": "仁德",
+          "sales_gwh": 1047.523676
+        },
+        {
+          "postal_code": "718",
+          "name": "關廟",
+          "sales_gwh": 290.60984
+        },
+        {
+          "postal_code": "719",
+          "name": "龍崎",
+          "sales_gwh": 12.66479
+        },
+        {
+          "postal_code": "720",
+          "name": "官田",
+          "sales_gwh": 732.087993
+        },
+        {
+          "postal_code": "721",
+          "name": "麻豆",
+          "sales_gwh": 371.387556
+        },
+        {
+          "postal_code": "722",
+          "name": "佳里",
+          "sales_gwh": 330.343401
+        },
+        {
+          "postal_code": "723",
+          "name": "西港",
+          "sales_gwh": 136.435327
+        },
+        {
+          "postal_code": "724",
+          "name": "七股",
+          "sales_gwh": 124.432494
+        },
+        {
+          "postal_code": "725",
+          "name": "將軍",
+          "sales_gwh": 84.892276
+        },
+        {
+          "postal_code": "726",
+          "name": "學甲",
+          "sales_gwh": 245.433068
+        },
+        {
+          "postal_code": "727",
+          "name": "北門",
+          "sales_gwh": 52.524039
+        },
+        {
+          "postal_code": "730",
+          "name": "新營",
+          "sales_gwh": 691.72855
+        },
+        {
+          "postal_code": "731",
+          "name": "後壁",
+          "sales_gwh": 151.675611
+        },
+        {
+          "postal_code": "732",
+          "name": "白河",
+          "sales_gwh": 121.458709
+        },
+        {
+          "postal_code": "733",
+          "name": "東山",
+          "sales_gwh": 60.47159
+        },
+        {
+          "postal_code": "734",
+          "name": "六甲",
+          "sales_gwh": 81.723024
+        },
+        {
+          "postal_code": "735",
+          "name": "下營",
+          "sales_gwh": 89.365819
+        },
+        {
+          "postal_code": "736",
+          "name": "柳營",
+          "sales_gwh": 488.027309
+        },
+        {
+          "postal_code": "737",
+          "name": "鹽水",
+          "sales_gwh": 401.863094
+        },
+        {
+          "postal_code": "741",
+          "name": "善化",
+          "sales_gwh": 6879.484167
+        },
+        {
+          "postal_code": "742",
+          "name": "大內",
+          "sales_gwh": 28.635827
+        },
+        {
+          "postal_code": "743",
+          "name": "山上",
+          "sales_gwh": 206.506642
+        },
+        {
+          "postal_code": "744",
+          "name": "新市",
+          "sales_gwh": 6246.144077
+        },
+        {
+          "postal_code": "745",
+          "name": "安定",
+          "sales_gwh": 7112.143495
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "高雄市",
+      "unit": "GWh",
+      "total": 32053.984604,
+      "district_count": 40,
+      "districts": [
+        {
+          "postal_code": "800",
+          "name": "新興區",
+          "sales_gwh": 367.795931
+        },
+        {
+          "postal_code": "801",
+          "name": "前金區",
+          "sales_gwh": 290.472498
+        },
+        {
+          "postal_code": "802",
+          "name": "苓雅區",
+          "sales_gwh": 890.720078
+        },
+        {
+          "postal_code": "803",
+          "name": "鹽埕區",
+          "sales_gwh": 136.111325
+        },
+        {
+          "postal_code": "804",
+          "name": "鼓山區",
+          "sales_gwh": 591.019883
+        },
+        {
+          "postal_code": "805",
+          "name": "旗津區",
+          "sales_gwh": 153.14191
+        },
+        {
+          "postal_code": "806",
+          "name": "前鎮區",
+          "sales_gwh": 2099.553627
+        },
+        {
+          "postal_code": "807",
+          "name": "三民區",
+          "sales_gwh": 1338.132548
+        },
+        {
+          "postal_code": "811",
+          "name": "楠梓區",
+          "sales_gwh": 3864.999532
+        },
+        {
+          "postal_code": "812",
+          "name": "小港區",
+          "sales_gwh": 6271.766854
+        },
+        {
+          "postal_code": "813",
+          "name": "左營區",
+          "sales_gwh": 936.287179
+        },
+        {
+          "postal_code": "814",
+          "name": "仁武",
+          "sales_gwh": 1042.017385
+        },
+        {
+          "postal_code": "815",
+          "name": "大社",
+          "sales_gwh": 726.800733
+        },
+        {
+          "postal_code": "817",
+          "name": "東沙",
+          "sales_gwh": 0.0
+        },
+        {
+          "postal_code": "819",
+          "name": "南沙",
+          "sales_gwh": 0.0
+        },
+        {
+          "postal_code": "820",
+          "name": "岡山",
+          "sales_gwh": 2341.892591
+        },
+        {
+          "postal_code": "821",
+          "name": "路竹",
+          "sales_gwh": 2357.235376
+        },
+        {
+          "postal_code": "822",
+          "name": "阿蓮",
+          "sales_gwh": 237.701901
+        },
+        {
+          "postal_code": "823",
+          "name": "田寮",
+          "sales_gwh": 29.01237
+        },
+        {
+          "postal_code": "824",
+          "name": "燕巢",
+          "sales_gwh": 609.29336
+        },
+        {
+          "postal_code": "825",
+          "name": "橋頭",
+          "sales_gwh": 414.441997
+        },
+        {
+          "postal_code": "826",
+          "name": "梓官",
+          "sales_gwh": 204.134102
+        },
+        {
+          "postal_code": "827",
+          "name": "彌陀",
+          "sales_gwh": 100.980821
+        },
+        {
+          "postal_code": "828",
+          "name": "永安",
+          "sales_gwh": 626.856188
+        },
+        {
+          "postal_code": "829",
+          "name": "湖內",
+          "sales_gwh": 230.111157
+        },
+        {
+          "postal_code": "830",
+          "name": "鳳山",
+          "sales_gwh": 1220.780404
+        },
+        {
+          "postal_code": "831",
+          "name": "大寮",
+          "sales_gwh": 1408.975846
+        },
+        {
+          "postal_code": "832",
+          "name": "林園",
+          "sales_gwh": 2174.178007
+        },
+        {
+          "postal_code": "833",
+          "name": "鳥松",
+          "sales_gwh": 346.601481
+        },
+        {
+          "postal_code": "840",
+          "name": "大樹",
+          "sales_gwh": 511.538172
+        },
+        {
+          "postal_code": "842",
+          "name": "旗山",
+          "sales_gwh": 166.650218
+        },
+        {
+          "postal_code": "843",
+          "name": "美濃",
+          "sales_gwh": 116.469139
+        },
+        {
+          "postal_code": "844",
+          "name": "六龜",
+          "sales_gwh": 31.611698
+        },
+        {
+          "postal_code": "845",
+          "name": "內門",
+          "sales_gwh": 41.583202
+        },
+        {
+          "postal_code": "846",
+          "name": "杉林",
+          "sales_gwh": 22.133993
+        },
+        {
+          "postal_code": "847",
+          "name": "甲仙",
+          "sales_gwh": 14.428477
+        },
+        {
+          "postal_code": "848",
+          "name": "桃源",
+          "sales_gwh": 7.773613
+        },
+        {
+          "postal_code": "849",
+          "name": "那瑪夏區",
+          "sales_gwh": 3.783818
+        },
+        {
+          "postal_code": "851",
+          "name": "茂林",
+          "sales_gwh": 3.196946
+        },
+        {
+          "postal_code": "852",
+          "name": "茄萣",
+          "sales_gwh": 123.800244
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "澎湖縣",
+      "unit": "GWh",
+      "total": 479.459267,
+      "district_count": 6,
+      "districts": [
+        {
+          "postal_code": "880",
+          "name": "馬公",
+          "sales_gwh": 346.391578
+        },
+        {
+          "postal_code": "881",
+          "name": "西嶼",
+          "sales_gwh": 25.660214
+        },
+        {
+          "postal_code": "882",
+          "name": "望安",
+          "sales_gwh": 7.734749
+        },
+        {
+          "postal_code": "883",
+          "name": "七美",
+          "sales_gwh": 9.539351
+        },
+        {
+          "postal_code": "884",
+          "name": "白沙",
+          "sales_gwh": 30.895651
+        },
+        {
+          "postal_code": "885",
+          "name": "湖西",
+          "sales_gwh": 59.237724
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "金門縣",
+      "unit": "GWh",
+      "total": 319.928947,
+      "district_count": 6,
+      "districts": [
+        {
+          "postal_code": "890",
+          "name": "金沙",
+          "sales_gwh": 35.748678
+        },
+        {
+          "postal_code": "891",
+          "name": "金湖",
+          "sales_gwh": 113.946176
+        },
+        {
+          "postal_code": "892",
+          "name": "金寧",
+          "sales_gwh": 71.784451
+        },
+        {
+          "postal_code": "893",
+          "name": "金城",
+          "sales_gwh": 80.036132
+        },
+        {
+          "postal_code": "894",
+          "name": "烈嶼",
+          "sales_gwh": 18.41351
+        },
+        {
+          "postal_code": "896",
+          "name": "烏坵",
+          "sales_gwh": 0.0
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "屏東縣",
+      "unit": "GWh",
+      "total": 4999.679832,
+      "district_count": 33,
+      "districts": [
+        {
+          "postal_code": "900",
+          "name": "屏東",
+          "sales_gwh": 1206.542305
+        },
+        {
+          "postal_code": "901",
+          "name": "三地門",
+          "sales_gwh": 13.419858
+        },
+        {
+          "postal_code": "902",
+          "name": "霧臺",
+          "sales_gwh": 4.303403
+        },
+        {
+          "postal_code": "903",
+          "name": "瑪家",
+          "sales_gwh": 12.353983
+        },
+        {
+          "postal_code": "904",
+          "name": "九如",
+          "sales_gwh": 126.3011
+        },
+        {
+          "postal_code": "905",
+          "name": "里港",
+          "sales_gwh": 234.738643
+        },
+        {
+          "postal_code": "906",
+          "name": "高樹",
+          "sales_gwh": 120.259448
+        },
+        {
+          "postal_code": "907",
+          "name": "鹽埔",
+          "sales_gwh": 157.410581
+        },
+        {
+          "postal_code": "908",
+          "name": "長治",
+          "sales_gwh": 285.784917
+        },
+        {
+          "postal_code": "909",
+          "name": "麟洛",
+          "sales_gwh": 55.979737
+        },
+        {
+          "postal_code": "911",
+          "name": "竹田",
+          "sales_gwh": 88.308022
+        },
+        {
+          "postal_code": "912",
+          "name": "內埔",
+          "sales_gwh": 346.654033
+        },
+        {
+          "postal_code": "913",
+          "name": "萬丹",
+          "sales_gwh": 283.324168
+        },
+        {
+          "postal_code": "920",
+          "name": "潮州",
+          "sales_gwh": 286.740661
+        },
+        {
+          "postal_code": "921",
+          "name": "泰武",
+          "sales_gwh": 8.906653
+        },
+        {
+          "postal_code": "922",
+          "name": "來義",
+          "sales_gwh": 12.729279
+        },
+        {
+          "postal_code": "923",
+          "name": "萬巒",
+          "sales_gwh": 89.447244
+        },
+        {
+          "postal_code": "924",
+          "name": "崁頂",
+          "sales_gwh": 51.483162
+        },
+        {
+          "postal_code": "925",
+          "name": "新埤",
+          "sales_gwh": 67.677542
+        },
+        {
+          "postal_code": "926",
+          "name": "南州",
+          "sales_gwh": 44.494829
+        },
+        {
+          "postal_code": "927",
+          "name": "林邊",
+          "sales_gwh": 62.50097
+        },
+        {
+          "postal_code": "928",
+          "name": "東港",
+          "sales_gwh": 230.947489
+        },
+        {
+          "postal_code": "929",
+          "name": "琉球",
+          "sales_gwh": 48.139519
+        },
+        {
+          "postal_code": "931",
+          "name": "佳冬",
+          "sales_gwh": 147.120837
+        },
+        {
+          "postal_code": "932",
+          "name": "新園",
+          "sales_gwh": 219.203348
+        },
+        {
+          "postal_code": "940",
+          "name": "枋寮",
+          "sales_gwh": 420.377364
+        },
+        {
+          "postal_code": "941",
+          "name": "枋山",
+          "sales_gwh": 40.758971
+        },
+        {
+          "postal_code": "942",
+          "name": "春日",
+          "sales_gwh": 7.238681
+        },
+        {
+          "postal_code": "943",
+          "name": "獅子",
+          "sales_gwh": 17.403905
+        },
+        {
+          "postal_code": "944",
+          "name": "車城",
+          "sales_gwh": 66.443513
+        },
+        {
+          "postal_code": "945",
+          "name": "牡丹",
+          "sales_gwh": 13.2306
+        },
+        {
+          "postal_code": "946",
+          "name": "恆春",
+          "sales_gwh": 202.322963
+        },
+        {
+          "postal_code": "947",
+          "name": "滿州",
+          "sales_gwh": 27.132104
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "臺東縣",
+      "unit": "GWh",
+      "total": 1032.544474,
+      "district_count": 16,
+      "districts": [
+        {
+          "postal_code": "950",
+          "name": "臺東",
+          "sales_gwh": 654.469498
+        },
+        {
+          "postal_code": "951",
+          "name": "綠島",
+          "sales_gwh": 18.812652
+        },
+        {
+          "postal_code": "952",
+          "name": "蘭嶼",
+          "sales_gwh": 20.130682
+        },
+        {
+          "postal_code": "953",
+          "name": "延平",
+          "sales_gwh": 6.635046
+        },
+        {
+          "postal_code": "954",
+          "name": "卑南",
+          "sales_gwh": 65.842458
+        },
+        {
+          "postal_code": "955",
+          "name": "鹿野",
+          "sales_gwh": 30.524964
+        },
+        {
+          "postal_code": "956",
+          "name": "關山",
+          "sales_gwh": 42.411131
+        },
+        {
+          "postal_code": "957",
+          "name": "海端",
+          "sales_gwh": 6.62627
+        },
+        {
+          "postal_code": "958",
+          "name": "池上",
+          "sales_gwh": 29.658859
+        },
+        {
+          "postal_code": "959",
+          "name": "東河",
+          "sales_gwh": 22.146951
+        },
+        {
+          "postal_code": "961",
+          "name": "成功",
+          "sales_gwh": 45.495964
+        },
+        {
+          "postal_code": "962",
+          "name": "長濱",
+          "sales_gwh": 16.511283
+        },
+        {
+          "postal_code": "963",
+          "name": "太麻里",
+          "sales_gwh": 36.829189
+        },
+        {
+          "postal_code": "964",
+          "name": "金峰",
+          "sales_gwh": 6.016659
+        },
+        {
+          "postal_code": "965",
+          "name": "大武",
+          "sales_gwh": 23.936882
+        },
+        {
+          "postal_code": "966",
+          "name": "達仁",
+          "sales_gwh": 6.495986
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
+    },
+    {
+      "year": 2025,
+      "scope": "花蓮縣",
+      "unit": "GWh",
+      "total": 2476.063485,
+      "district_count": 13,
+      "districts": [
+        {
+          "postal_code": "970",
+          "name": "花蓮",
+          "sales_gwh": 652.783828
+        },
+        {
+          "postal_code": "971",
+          "name": "新城",
+          "sales_gwh": 420.749673
+        },
+        {
+          "postal_code": "972",
+          "name": "秀林",
+          "sales_gwh": 414.905178
+        },
+        {
+          "postal_code": "973",
+          "name": "吉安",
+          "sales_gwh": 555.020308
+        },
+        {
+          "postal_code": "974",
+          "name": "壽豐",
+          "sales_gwh": 137.113619
+        },
+        {
+          "postal_code": "975",
+          "name": "鳳林",
+          "sales_gwh": 37.951453
+        },
+        {
+          "postal_code": "976",
+          "name": "光復",
+          "sales_gwh": 45.913336
+        },
+        {
+          "postal_code": "977",
+          "name": "豐濱",
+          "sales_gwh": 12.707643
+        },
+        {
+          "postal_code": "978",
+          "name": "瑞穗",
+          "sales_gwh": 49.168575
+        },
+        {
+          "postal_code": "979",
+          "name": "萬榮",
+          "sales_gwh": 8.60327
+        },
+        {
+          "postal_code": "981",
+          "name": "玉里",
+          "sales_gwh": 103.996954
+        },
+        {
+          "postal_code": "982",
+          "name": "卓溪",
+          "sales_gwh": 7.583626
+        },
+        {
+          "postal_code": "983",
+          "name": "富里",
+          "sales_gwh": 29.566022
+        }
+      ],
+      "months": 12,
+      "definition": "各行政區每月『總計（含臨時用電）』售電度數加總"
     }
   ],
   "monthly_generation": [
@@ -1220,24 +3263,29 @@
         "detail": "latest 2026-05"
       },
       {
-        "name": "keelung_full_year",
+        "name": "county_count",
         "status": "passed",
-        "detail": "12 months"
+        "detail": "22 counties and cities"
       },
       {
-        "name": "keelung_district_count",
+        "name": "county_full_year",
         "status": "passed",
-        "detail": "7 districts"
+        "detail": "all county records contain 12 months"
       },
       {
-        "name": "keelung_sales_positive",
+        "name": "county_district_count",
         "status": "passed",
-        "detail": "1552.188413 GWh"
+        "detail": "368 districts"
       },
       {
-        "name": "keelung_selected_rows",
+        "name": "county_sales_positive",
         "status": "passed",
-        "detail": "84 monthly district rows"
+        "detail": "national county sales sum 240486.709928 GWh"
+      },
+      {
+        "name": "county_selected_rows",
+        "status": "passed",
+        "detail": "4416 monthly district rows"
       }
     ]
   }

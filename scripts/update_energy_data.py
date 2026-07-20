@@ -52,7 +52,22 @@ SOURCES = {
     },
 }
 
-KEELUNG_POSTAL_CODES = {str(code) for code in range(200, 207)}
+COUNTY_ORDER = [
+    "臺北市", "基隆市", "新北市", "連江縣", "宜蘭縣", "新竹市", "新竹縣", "桃園市",
+    "苗栗縣", "臺中市", "彰化縣", "南投縣", "嘉義市", "嘉義縣", "雲林縣", "臺南市",
+    "高雄市", "澎湖縣", "金門縣", "屏東縣", "臺東縣", "花蓮縣",
+]
+
+COUNTY_POSTAL_RANGES = [
+    (100, 116, "臺北市"), (200, 206, "基隆市"), (207, 208, "新北市"),
+    (209, 212, "連江縣"), (220, 253, "新北市"), (260, 272, "宜蘭縣"),
+    (300, 300, "新竹市"), (302, 315, "新竹縣"), (320, 338, "桃園市"),
+    (350, 369, "苗栗縣"), (400, 439, "臺中市"), (500, 530, "彰化縣"),
+    (540, 558, "南投縣"), (600, 600, "嘉義市"), (602, 625, "嘉義縣"),
+    (630, 655, "雲林縣"), (700, 745, "臺南市"), (800, 852, "高雄市"),
+    (880, 885, "澎湖縣"), (890, 896, "金門縣"), (900, 947, "屏東縣"),
+    (950, 966, "臺東縣"), (970, 983, "花蓮縣"),
+]
 
 MONTHLY_METRICS = {
     "total": "全國發電量_總計(數值)",
@@ -245,55 +260,84 @@ def normalize_taipower(rows: list[dict[str, str]]) -> tuple[dict, list[dict]]:
     }, normalized
 
 
-def normalize_keelung_sales(rows: list[dict[str, str]]) -> tuple[dict, list[dict]]:
+def county_for_postal(postal_code: str) -> str | None:
+    if not postal_code.isdigit():
+        return None
+    code = int(postal_code)
+    for start, end, county in COUNTY_POSTAL_RANGES:
+        if start <= code <= end:
+            return county
+    return None
+
+
+def normalize_county_sales(rows: list[dict[str, str]]) -> tuple[list[dict], list[dict], dict]:
     columns = ["年度", "月份", "郵遞區號", "行政區", "項目", "售電度數(度)"]
     require_columns(rows, columns, "township_sales_2025")
-    district_kwh: dict[str, float] = {}
-    months: set[str] = set()
+    county_district_kwh: dict[str, dict[str, float]] = {county: {} for county in COUNTY_ORDER}
+    county_months: dict[str, set[str]] = {county: set() for county in COUNTY_ORDER}
     selected_rows = 0
+    unmapped_nonzero: list[str] = []
     for row in rows:
         postal_code = str(row["郵遞區號"]).strip().zfill(3)
-        if postal_code not in KEELUNG_POSTAL_CODES or str(row["項目"]).strip() != "26總計（含臨時用電）":
+        if str(row["項目"]).strip() != "26總計（含臨時用電）":
             continue
         year = str(row["年度"]).strip()
         month = str(row["月份"]).strip().zfill(2)
         if year != "114" or not month.isdigit():
             continue
+        value_kwh = number(row, "售電度數(度)")
+        county = county_for_postal(postal_code)
+        if not county:
+            if value_kwh:
+                unmapped_nonzero.append(f"{postal_code} {row['行政區']} {value_kwh}")
+            continue
         district = str(row["行政區"]).strip()
-        district_kwh[district] = district_kwh.get(district, 0.0) + number(row, "售電度數(度)")
-        months.add(month)
+        district_key = f"{postal_code}:{district}"
+        county_district_kwh[county][district_key] = county_district_kwh[county].get(district_key, 0.0) + value_kwh
+        county_months[county].add(month)
         selected_rows += 1
 
-    districts = [
-        {"name": name, "sales_gwh": round(value / 1_000_000, 6)}
-        for name, value in sorted(district_kwh.items())
-    ]
-    total_gwh = round(sum(item["sales_gwh"] for item in districts), 6)
-    normalized = [
-        {
+    if unmapped_nonzero:
+        raise ValueError(f"township_sales_2025: unmapped non-zero postal rows: {unmapped_nonzero[:5]}")
+
+    county_records: list[dict] = []
+    normalized: list[dict] = []
+    for county in COUNTY_ORDER:
+        districts = [
+            {"postal_code": key.split(":", 1)[0], "name": key.split(":", 1)[1], "sales_gwh": round(value / 1_000_000, 6)}
+            for key, value in sorted(county_district_kwh[county].items())
+        ]
+        total_gwh = round(sum(item["sales_gwh"] for item in districts), 6)
+        record = {
+            "year": 2025,
+            "scope": county,
+            "unit": "GWh",
+            "total": total_gwh,
+            "district_count": len(districts),
+            "districts": districts,
+            "months": len(county_months[county]),
+            "definition": "各行政區每月『總計（含臨時用電）』售電度數加總",
+        }
+        county_records.append(record)
+        normalized.append({
             "dataset_id": "township_sales_2025",
             "period": "2025",
             "frequency": "year",
-            "scope": f"基隆市{item['name']}",
+            "scope": county,
             "category": "electricity_sales",
             "metric": "sales_total",
-            "value": item["sales_gwh"],
+            "value": total_gwh,
             "unit": "GWh",
-            "value_gwh": item["sales_gwh"],
+            "value_gwh": total_gwh,
             "source_url": SOURCES["township_sales_2025"]["dataset_url"],
-        }
-        for item in districts
-    ]
-    return {
-        "year": 2025,
-        "scope": "基隆市",
-        "unit": "GWh",
-        "total": total_gwh,
-        "districts": districts,
-        "months": len(months),
+        })
+    diagnostics = {
         "selected_rows": selected_rows,
-        "definition": "七個行政區每月『總計（含臨時用電）』售電度數加總",
-    }, normalized
+        "district_count": sum(item["district_count"] for item in county_records),
+        "county_count": len(county_records),
+        "total_gwh": round(sum(item["total"] for item in county_records), 6),
+    }
+    return county_records, normalized, diagnostics
 
 
 def build_annual_generation(monthly: list[dict]) -> list[dict]:
@@ -319,7 +363,7 @@ def month_age(period: str) -> int:
     return (now.year - year) * 12 + now.month - month
 
 
-def validate_source_data(monthly: list[dict], annual: list[dict], station: dict, city_sales: dict) -> list[dict]:
+def validate_source_data(monthly: list[dict], annual: list[dict], station: dict, county_sales: list[dict], county_diagnostics: dict) -> list[dict]:
     checks: list[dict] = []
 
     def check(name: str, condition: bool, detail: str) -> None:
@@ -340,11 +384,51 @@ def validate_source_data(monthly: list[dict], annual: list[dict], station: dict,
     check("annual_renewables_reconcile", abs(latest_year["renewable_total"] - annual_sum) < 0.05, f"difference {latest_year['renewable_total'] - annual_sum:.6f} GWh")
     check("offshore_within_wind_total", 0 <= latest_year["wind_offshore"] <= latest_year["wind_total"], f"offshore {latest_year['wind_offshore']:.3f} / total {latest_year['wind_total']:.3f} GWh")
     check("taipower_latest_period", bool(station["period"]), f"latest {station['period']}")
-    check("keelung_full_year", city_sales["months"] == 12, f"{city_sales['months']} months")
-    check("keelung_district_count", len(city_sales["districts"]) == 7, f"{len(city_sales['districts'])} districts")
-    check("keelung_sales_positive", city_sales["total"] > 0, f"{city_sales['total']:.6f} GWh")
-    check("keelung_selected_rows", city_sales["selected_rows"] == 84, f"{city_sales['selected_rows']} monthly district rows")
+    check("county_count", len(county_sales) == 22, f"{len(county_sales)} counties and cities")
+    check("county_full_year", all(item["months"] == 12 for item in county_sales), "all county records contain 12 months")
+    check("county_district_count", county_diagnostics["district_count"] == 368, f"{county_diagnostics['district_count']} districts")
+    check("county_sales_positive", all(item["total"] > 0 for item in county_sales), f"national county sales sum {county_diagnostics['total_gwh']:.6f} GWh")
+    check("county_selected_rows", county_diagnostics["selected_rows"] == 4_416, f"{county_diagnostics['selected_rows']} monthly district rows")
     return checks
+
+
+def sql_value(value: object) -> str:
+    if value is None:
+        return "NULL"
+    if isinstance(value, (int, float)):
+        return repr(value)
+    return "'" + str(value).replace("'", "''") + "'"
+
+
+def build_d1_seed(monthly: list[dict], annual: list[dict], annual_generation: list[dict], county_sales: list[dict]) -> tuple[str, int]:
+    records: list[tuple] = []
+
+    def add(record_id: str, period: str, year: int, month: int | None, area: str, area_level: str,
+            metric: str, energy_type: str, value: float, source_id: str, notes: str) -> None:
+        source = SOURCES[source_id]
+        records.append((record_id, period, year, month, area, area_level, metric, energy_type,
+                        round(float(value), 6), "GWh", source_id, source["title"], source["dataset_url"], notes))
+
+    for row in annual_generation:
+        add(f"national-generation-{row['year']}", str(row["year"]), row["year"], None, "全臺", "national",
+            "generation_total", "all", row["total"], "generation_monthly", "12 個月全國發電量加總")
+    for row in county_sales:
+        add(f"county-sales-{row['year']}-{COUNTY_ORDER.index(row['scope']) + 1:02}", str(row["year"]), row["year"], None,
+            row["scope"], "county", "electricity_sales", "all", row["total"], "township_sales_2025", row["definition"])
+    for row in annual:
+        for energy_type in ANNUAL_METRICS:
+            add(f"national-renewable-{row['year']}-{energy_type}", str(row["year"]), row["year"], None, "全臺", "national",
+                "generation", energy_type, row[energy_type], "renewable_annual", "再生能源年度發電量")
+    for row in monthly[-36:]:
+        year, month = (int(part) for part in row["period"].split("-"))
+        for energy_type in MONTHLY_METRICS:
+            add(f"national-monthly-{row['period']}-{energy_type}", row["period"], year, month, "全臺", "national",
+                "generation", energy_type, row[energy_type], "generation_monthly", "全國月發電量")
+
+    columns = "record_id,period,year,month,area,area_level,metric,energy_type,value,unit,source_id,source_title,source_url,notes"
+    statements = ["DELETE FROM energy_records;"]
+    statements.extend(f"INSERT INTO energy_records ({columns}) VALUES ({','.join(sql_value(value) for value in record)});" for record in records)
+    return "\n".join(statements) + "\n", len(records)
 
 
 def write_outputs(output_dir: Path, payloads: dict[str, bytes]) -> None:
@@ -352,9 +436,9 @@ def write_outputs(output_dir: Path, payloads: dict[str, bytes]) -> None:
     monthly, monthly_normalized = normalize_monthly(parsed["generation_monthly"])
     annual, annual_normalized = normalize_annual(parsed["renewable_annual"])
     station, station_normalized = normalize_taipower(parsed["taipower_wind_solar"])
-    city_sales, city_sales_normalized = normalize_keelung_sales(parsed["township_sales_2025"])
+    county_sales, county_sales_normalized, county_diagnostics = normalize_county_sales(parsed["township_sales_2025"])
     annual_generation = build_annual_generation(monthly)
-    checks = validate_source_data(monthly, annual, station, city_sales)
+    checks = validate_source_data(monthly, annual, station, county_sales, county_diagnostics)
     generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
     source_manifest = []
@@ -362,7 +446,7 @@ def write_outputs(output_dir: Path, payloads: dict[str, bytes]) -> None:
         "generation_monthly": monthly[-1]["period"],
         "renewable_annual": str(annual[-1]["year"]),
         "taipower_wind_solar": station["period"],
-        "township_sales_2025": str(city_sales["year"]),
+        "township_sales_2025": str(county_sales[0]["year"]),
     }
     for source_id, source in SOURCES.items():
         source_manifest.append(
@@ -388,23 +472,25 @@ def write_outputs(output_dir: Path, payloads: dict[str, bytes]) -> None:
         "latest_annual_renewable": annual[-1],
         "taipower_latest": station,
         "annual_generation": annual_generation,
-        "city_electricity_sales": [city_sales],
+        "city_electricity_sales": county_sales,
         "monthly_generation": monthly[-36:],
         "annual_renewable": annual,
         "sources": source_manifest,
         "quality": {"status": "passed", "checks": checks},
     }
 
-    normalized_rows = monthly_normalized + annual_normalized + station_normalized + city_sales_normalized
+    normalized_rows = monthly_normalized + annual_normalized + station_normalized + county_sales_normalized
     dataframe = pd.DataFrame(normalized_rows)
+    d1_seed, d1_record_count = build_d1_seed(monthly, annual, annual_generation, county_sales)
     output_dir.mkdir(parents=True, exist_ok=True)
     dataframe.to_parquet(output_dir / "official_energy_timeseries.parquet", index=False, compression="zstd")
     (output_dir / "official_energy_snapshot.json").write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (output_dir / "source_manifest.json").write_text(json.dumps({"generated_at": generated_at, "sources": source_manifest}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (output_dir / "data_quality_report.json").write_text(json.dumps({"generated_at": generated_at, "status": "passed", "checks": checks, "parquet_rows": len(dataframe)}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (output_dir / "data_quality_report.json").write_text(json.dumps({"generated_at": generated_at, "status": "passed", "checks": checks, "parquet_rows": len(dataframe), "d1_records": d1_record_count}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (output_dir / "d1_energy_seed.sql").write_text(d1_seed, encoding="utf-8")
     print(
         f"Wrote {len(dataframe):,} normalized rows; latest month {monthly[-1]['period']}; "
-        f"latest renewable year {annual[-1]['year']}; Keelung {city_sales['year']} sales {city_sales['total']:.3f} GWh."
+        f"latest renewable year {annual[-1]['year']}; {len(county_sales)} county records; {d1_record_count} D1 records."
     )
 
 
