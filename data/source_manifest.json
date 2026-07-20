@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T05:56:05Z",
+  "generated_at": "2026-07-20T20:07:03Z",
   "sources": [
     {
       "id": "generation_monthly",
@@ -36,6 +36,18 @@
       "bytes": 155158,
       "rows": 1848,
       "latest_record": "2026-05"
+    },
+    {
+      "id": "township_sales_2025",
+      "title": "台灣電力公司－114 年鄉鎮市（郵遞區）別用電統計",
+      "dataset_url": "https://data.gov.tw/dataset/14135",
+      "download_url": "https://service.taipower.com.tw/data/opendata/apply/file/d007025/dist_kwh_114.csv",
+      "frequency": "每年",
+      "license": "政府資料開放授權條款－第1版",
+      "sha256": "af6dd74bf4e409a9119de13ee29afbdfa1c7930dab849fe183fe7096b7c1fa11",
+      "bytes": 7015153,
+      "rows": 123984,
+      "latest_record": "2025"
     }
   ]
 }

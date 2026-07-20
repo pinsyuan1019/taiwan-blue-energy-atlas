@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T05:56:05Z",
+  "generated_at": "2026-07-20T20:07:03Z",
   "status": "passed",
   "checks": [
     {
@@ -41,7 +41,27 @@
       "name": "taipower_latest_period",
       "status": "passed",
       "detail": "latest 2026-05"
+    },
+    {
+      "name": "keelung_full_year",
+      "status": "passed",
+      "detail": "12 months"
+    },
+    {
+      "name": "keelung_district_count",
+      "status": "passed",
+      "detail": "7 districts"
+    },
+    {
+      "name": "keelung_sales_positive",
+      "status": "passed",
+      "detail": "1552.188413 GWh"
+    },
+    {
+      "name": "keelung_selected_rows",
+      "status": "passed",
+      "detail": "84 monthly district rows"
     }
   ],
-  "parquet_rows": 5299
+  "parquet_rows": 5306
 }

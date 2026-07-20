@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-20T05:56:05Z",
+  "generated_at": "2026-07-20T20:07:03Z",
   "display_note": "數據由官方 CSV 自動整理；空間圖示仍為議題導覽，不代表工程邊界。",
   "latest_month": {
     "period": "2026-05",
@@ -44,6 +44,163 @@
       "離岸風力/Offshore Wind": 18.119701
     }
   },
+  "annual_generation": [
+    {
+      "year": 2007,
+      "unit": "GWh",
+      "total": 243116.583981,
+      "months": 12
+    },
+    {
+      "year": 2008,
+      "unit": "GWh",
+      "total": 238305.365303,
+      "months": 12
+    },
+    {
+      "year": 2009,
+      "unit": "GWh",
+      "total": 230037.15933,
+      "months": 12
+    },
+    {
+      "year": 2010,
+      "unit": "GWh",
+      "total": 247058.866975,
+      "months": 12
+    },
+    {
+      "year": 2011,
+      "unit": "GWh",
+      "total": 252167.014236,
+      "months": 12
+    },
+    {
+      "year": 2012,
+      "unit": "GWh",
+      "total": 250373.424813,
+      "months": 12
+    },
+    {
+      "year": 2013,
+      "unit": "GWh",
+      "total": 252340.814504,
+      "months": 12
+    },
+    {
+      "year": 2014,
+      "unit": "GWh",
+      "total": 259963.935448,
+      "months": 12
+    },
+    {
+      "year": 2015,
+      "unit": "GWh",
+      "total": 258141.887704,
+      "months": 12
+    },
+    {
+      "year": 2016,
+      "unit": "GWh",
+      "total": 264107.656991,
+      "months": 12
+    },
+    {
+      "year": 2017,
+      "unit": "GWh",
+      "total": 270256.406647,
+      "months": 12
+    },
+    {
+      "year": 2018,
+      "unit": "GWh",
+      "total": 275497.102025,
+      "months": 12
+    },
+    {
+      "year": 2019,
+      "unit": "GWh",
+      "total": 274141.191365,
+      "months": 12
+    },
+    {
+      "year": 2020,
+      "unit": "GWh",
+      "total": 280172.269322,
+      "months": 12
+    },
+    {
+      "year": 2021,
+      "unit": "GWh",
+      "total": 291413.996865,
+      "months": 12
+    },
+    {
+      "year": 2022,
+      "unit": "GWh",
+      "total": 288408.302068,
+      "months": 12
+    },
+    {
+      "year": 2023,
+      "unit": "GWh",
+      "total": 282859.165983,
+      "months": 12
+    },
+    {
+      "year": 2024,
+      "unit": "GWh",
+      "total": 289385.942307,
+      "months": 12
+    },
+    {
+      "year": 2025,
+      "unit": "GWh",
+      "total": 289705.181731,
+      "months": 12
+    }
+  ],
+  "city_electricity_sales": [
+    {
+      "year": 2025,
+      "scope": "基隆市",
+      "unit": "GWh",
+      "total": 1552.188413,
+      "districts": [
+        {
+          "name": "七堵區",
+          "sales_gwh": 284.916217
+        },
+        {
+          "name": "中山區",
+          "sales_gwh": 190.965165
+        },
+        {
+          "name": "中正區",
+          "sales_gwh": 242.604495
+        },
+        {
+          "name": "仁愛區",
+          "sales_gwh": 190.142367
+        },
+        {
+          "name": "信義區",
+          "sales_gwh": 173.593936
+        },
+        {
+          "name": "安樂區",
+          "sales_gwh": 351.227237
+        },
+        {
+          "name": "暖暖區",
+          "sales_gwh": 118.738996
+        }
+      ],
+      "months": 12,
+      "selected_rows": 84,
+      "definition": "七個行政區每月『總計（含臨時用電）』售電度數加總"
+    }
+  ],
   "monthly_generation": [
     {
       "period": "2023-06",
@@ -1005,6 +1162,18 @@
       "bytes": 155158,
       "rows": 1848,
       "latest_record": "2026-05"
+    },
+    {
+      "id": "township_sales_2025",
+      "title": "台灣電力公司－114 年鄉鎮市（郵遞區）別用電統計",
+      "dataset_url": "https://data.gov.tw/dataset/14135",
+      "download_url": "https://service.taipower.com.tw/data/opendata/apply/file/d007025/dist_kwh_114.csv",
+      "frequency": "每年",
+      "license": "政府資料開放授權條款－第1版",
+      "sha256": "af6dd74bf4e409a9119de13ee29afbdfa1c7930dab849fe183fe7096b7c1fa11",
+      "bytes": 7015153,
+      "rows": 123984,
+      "latest_record": "2025"
     }
   ],
   "quality": {
@@ -1049,6 +1218,26 @@
         "name": "taipower_latest_period",
         "status": "passed",
         "detail": "latest 2026-05"
+      },
+      {
+        "name": "keelung_full_year",
+        "status": "passed",
+        "detail": "12 months"
+      },
+      {
+        "name": "keelung_district_count",
+        "status": "passed",
+        "detail": "7 districts"
+      },
+      {
+        "name": "keelung_sales_positive",
+        "status": "passed",
+        "detail": "1552.188413 GWh"
+      },
+      {
+        "name": "keelung_selected_rows",
+        "status": "passed",
+        "detail": "84 monthly district rows"
       }
     ]
   }
