@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-03T05:59:14Z",
+  "generated_at": "2026-08-10T04:17:55Z",
   "status": "passed",
   "checks": [
     {
       "name": "monthly_record_count",
       "status": "passed",
-      "detail": "233 monthly rows"
+      "detail": "234 monthly rows"
     },
     {
       "name": "annual_record_count",
@@ -15,12 +15,12 @@
     {
       "name": "monthly_freshness",
       "status": "passed",
-      "detail": "latest 2026-05"
+      "detail": "latest 2026-06"
     },
     {
       "name": "monthly_total_reconciles",
       "status": "passed",
-      "detail": "difference 0.000000 GWh"
+      "detail": "difference -0.000000 GWh"
     },
     {
       "name": "monthly_renewables_reconcile",
@@ -68,6 +68,6 @@
       "detail": "4416 monthly district rows"
     }
   ],
-  "parquet_rows": 5321,
+  "parquet_rows": 5335,
   "d1_records": 734
 }

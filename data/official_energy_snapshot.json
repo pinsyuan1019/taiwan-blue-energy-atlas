@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-03T05:59:14Z",
+  "generated_at": "2026-08-10T04:17:55Z",
   "display_note": "數據由官方 CSV 自動整理；空間圖示仍為議題導覽，不代表工程邊界。",
   "latest_month": {
-    "period": "2026-05",
+    "period": "2026-06",
     "unit": "GWh",
-    "total": 25268.745874029,
-    "pumped_hydro": 235.492,
-    "thermal": 21704.081629247,
-    "coal": 8979.98552888,
-    "oil": 309.834251898,
-    "gas": 12414.261848469,
+    "total": 25594.709150269,
+    "pumped_hydro": 205.767,
+    "thermal": 22216.572779629,
+    "coal": 9135.021034724,
+    "oil": 317.248031961,
+    "gas": 12764.303712944,
     "nuclear": 0.0,
-    "renewable_total": 3329.172244782,
-    "conventional_hydro": 273.694199,
-    "geothermal": 2.242804,
-    "solar": 1802.03958703,
-    "wind_total": 858.830217,
-    "biomass": 25.254442649,
-    "waste": 367.110995103
+    "renewable_total": 3172.36937064,
+    "conventional_hydro": 610.997728,
+    "geothermal": 2.408652,
+    "solar": 1533.50814627,
+    "wind_total": 667.94858,
+    "biomass": 21.914135077,
+    "waste": 335.592129293
   },
   "latest_annual_renewable": {
     "year": 2025,
@@ -2246,24 +2246,6 @@
   ],
   "monthly_generation": [
     {
-      "period": "2023-06",
-      "unit": "GWh",
-      "total": 25484.142722134,
-      "pumped_hydro": 247.071,
-      "thermal": 21695.226957105,
-      "coal": 12238.637405777,
-      "oil": 330.752907973,
-      "gas": 9125.836643355,
-      "nuclear": 1412.71261,
-      "renewable_total": 2129.132155029,
-      "conventional_hydro": 303.89525915,
-      "geothermal": 1.090186,
-      "solar": 1257.73399812,
-      "wind_total": 223.37685487,
-      "biomass": 29.554077615,
-      "waste": 313.481779274
-    },
-    {
       "period": "2023-07",
       "unit": "GWh",
       "total": 27338.687849276,
@@ -2892,6 +2874,24 @@
       "wind_total": 858.830217,
       "biomass": 25.254442649,
       "waste": 367.110995103
+    },
+    {
+      "period": "2026-06",
+      "unit": "GWh",
+      "total": 25594.709150269,
+      "pumped_hydro": 205.767,
+      "thermal": 22216.572779629,
+      "coal": 9135.021034724,
+      "oil": 317.248031961,
+      "gas": 12764.303712944,
+      "nuclear": 0.0,
+      "renewable_total": 3172.36937064,
+      "conventional_hydro": 610.997728,
+      "geothermal": 2.408652,
+      "solar": 1533.50814627,
+      "wind_total": 667.94858,
+      "biomass": 21.914135077,
+      "waste": 335.592129293
     }
   ],
   "annual_renewable": [
@@ -3177,10 +3177,10 @@
       "download_url": "https://www.moeaea.gov.tw/ECW/populace/opendata/wHandOpenData_File.ashx?set_id=171",
       "frequency": "每月",
       "license": "政府資料開放授權條款－第1版",
-      "sha256": "1fefcace69af9fefcda01047aeb0b61109d65b5a51cc3d220ebbf9da90d20359",
-      "bytes": 128862,
-      "rows": 233,
-      "latest_record": "2026-05"
+      "sha256": "280eaa95e079865feda98a9b76bcc8e1fd90247abdeda03b874b06edeb4b18c2",
+      "bytes": 129428,
+      "rows": 234,
+      "latest_record": "2026-06"
     },
     {
       "id": "renewable_annual",
@@ -3225,7 +3225,7 @@
       {
         "name": "monthly_record_count",
         "status": "passed",
-        "detail": "233 monthly rows"
+        "detail": "234 monthly rows"
       },
       {
         "name": "annual_record_count",
@@ -3235,12 +3235,12 @@
       {
         "name": "monthly_freshness",
         "status": "passed",
-        "detail": "latest 2026-05"
+        "detail": "latest 2026-06"
       },
       {
         "name": "monthly_total_reconciles",
         "status": "passed",
-        "detail": "difference 0.000000 GWh"
+        "detail": "difference -0.000000 GWh"
       },
       {
         "name": "monthly_renewables_reconcile",

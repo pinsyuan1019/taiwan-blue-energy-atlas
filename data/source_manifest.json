@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T05:59:14Z",
+  "generated_at": "2026-08-10T04:17:55Z",
   "sources": [
     {
       "id": "generation_monthly",
@@ -8,10 +8,10 @@
       "download_url": "https://www.moeaea.gov.tw/ECW/populace/opendata/wHandOpenData_File.ashx?set_id=171",
       "frequency": "每月",
       "license": "政府資料開放授權條款－第1版",
-      "sha256": "1fefcace69af9fefcda01047aeb0b61109d65b5a51cc3d220ebbf9da90d20359",
-      "bytes": 128862,
-      "rows": 233,
-      "latest_record": "2026-05"
+      "sha256": "280eaa95e079865feda98a9b76bcc8e1fd90247abdeda03b874b06edeb4b18c2",
+      "bytes": 129428,
+      "rows": 234,
+      "latest_record": "2026-06"
     },
     {
       "id": "renewable_annual",
