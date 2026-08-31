@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-24T03:37:54Z",
+  "generated_at": "2026-08-31T08:54:31Z",
   "display_note": "數據由官方 CSV 自動整理；空間圖示仍為議題導覽，不代表工程邊界。",
   "latest_month": {
     "period": "2026-06",
@@ -34,14 +34,14 @@
     "waste": 3849.728053465
   },
   "taipower_latest": {
-    "period": "2026-05",
+    "period": "2026-07",
     "unit": "GWh",
     "station_count": 64,
     "generation_by_energy_type": {
-      "地熱/Geothermal": 0.205244,
-      "太陽能/Solar": 42.037663,
-      "陸域風力/Onshore Wind": 35.559475,
-      "離岸風力/Offshore Wind": 18.119701
+      "地熱/Geothermal": 0.170246,
+      "太陽能/Solar": 40.575831,
+      "陸域風力/Onshore Wind": 19.192533,
+      "離岸風力/Offshore Wind": 13.703034
     }
   },
   "annual_generation": [
@@ -3201,10 +3201,10 @@
       "download_url": "https://service.taipower.com.tw/data/opendata/apply/file/d693001/001.csv",
       "frequency": "每月",
       "license": "政府資料開放授權條款－第1版",
-      "sha256": "c84c88bdc06edda15359ea03a7d015346cceffade7d3864002679539bb3e4587",
-      "bytes": 155158,
-      "rows": 1848,
-      "latest_record": "2026-05"
+      "sha256": "8e4068fd55cd969466d8c0a822db53983451f32daf65377dcc89f8b6236de326",
+      "bytes": 163945,
+      "rows": 1976,
+      "latest_record": "2026-07"
     },
     {
       "id": "township_sales_2025",
@@ -3260,7 +3260,7 @@
       {
         "name": "taipower_latest_period",
         "status": "passed",
-        "detail": "latest 2026-05"
+        "detail": "latest 2026-07"
       },
       {
         "name": "county_count",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T03:37:54Z",
+  "generated_at": "2026-08-31T08:54:31Z",
   "sources": [
     {
       "id": "generation_monthly",
@@ -32,10 +32,10 @@
       "download_url": "https://service.taipower.com.tw/data/opendata/apply/file/d693001/001.csv",
       "frequency": "每月",
       "license": "政府資料開放授權條款－第1版",
-      "sha256": "c84c88bdc06edda15359ea03a7d015346cceffade7d3864002679539bb3e4587",
-      "bytes": 155158,
-      "rows": 1848,
-      "latest_record": "2026-05"
+      "sha256": "8e4068fd55cd969466d8c0a822db53983451f32daf65377dcc89f8b6236de326",
+      "bytes": 163945,
+      "rows": 1976,
+      "latest_record": "2026-07"
     },
     {
       "id": "township_sales_2025",

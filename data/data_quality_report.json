@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T03:37:54Z",
+  "generated_at": "2026-08-31T08:54:31Z",
   "status": "passed",
   "checks": [
     {
@@ -40,7 +40,7 @@
     {
       "name": "taipower_latest_period",
       "status": "passed",
-      "detail": "latest 2026-05"
+      "detail": "latest 2026-07"
     },
     {
       "name": "county_count",
@@ -68,6 +68,6 @@
       "detail": "4416 monthly district rows"
     }
   ],
-  "parquet_rows": 5335,
+  "parquet_rows": 5463,
   "d1_records": 734
 }
