@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-05T09:36:26Z",
+  "generated_at": "2026-10-12T09:45:14Z",
   "display_note": "數據由官方 CSV 自動整理；空間圖示仍為議題導覽，不代表工程邊界。",
   "latest_month": {
-    "period": "2026-07",
+    "period": "2026-08",
     "unit": "GWh",
-    "total": 27712.178585775,
-    "pumped_hydro": 233.325,
-    "thermal": 23998.551284859,
-    "coal": 9631.678043397,
-    "oil": 380.357882199,
-    "gas": 13986.515359263,
+    "total": 27581.160200115,
+    "pumped_hydro": 215.238,
+    "thermal": 24091.182191898,
+    "coal": 9040.391327486,
+    "oil": 390.811681169,
+    "gas": 14659.979183243,
     "nuclear": 0.0,
-    "renewable_total": 3480.302300916,
-    "conventional_hydro": 650.134956,
-    "geothermal": 1.76544,
-    "solar": 1771.92712578,
-    "wind_total": 661.267835,
-    "biomass": 25.577585632,
-    "waste": 369.629358504
+    "renewable_total": 3274.740008217,
+    "conventional_hydro": 642.432246,
+    "geothermal": 2.56071,
+    "solar": 1585.70567812,
+    "wind_total": 673.837059,
+    "biomass": 20.327548833,
+    "waste": 349.876766264
   },
   "latest_annual_renewable": {
     "year": 2025,
@@ -34,14 +34,14 @@
     "waste": 3849.728053465
   },
   "taipower_latest": {
-    "period": "2026-07",
+    "period": "2026-08",
     "unit": "GWh",
-    "station_count": 64,
+    "station_count": 65,
     "generation_by_energy_type": {
-      "地熱/Geothermal": 0.170246,
-      "太陽能/Solar": 40.575831,
-      "陸域風力/Onshore Wind": 19.192533,
-      "離岸風力/Offshore Wind": 13.703034
+      "地熱/Geothermal": 0.229283,
+      "太陽能/Solar Power": 32.437846,
+      "陸域風力/Onshore Wind Power": 17.372886,
+      "離岸風力/Offshore Wind Power": 12.668729
     }
   },
   "annual_generation": [
@@ -2246,24 +2246,6 @@
   ],
   "monthly_generation": [
     {
-      "period": "2023-08",
-      "unit": "GWh",
-      "total": 26735.293326817,
-      "pumped_hydro": 256.857,
-      "thermal": 22560.139925613,
-      "coal": 11910.017131512,
-      "oil": 383.889898428,
-      "gas": 10266.232895673,
-      "nuclear": 1455.53946,
-      "renewable_total": 2462.756941204,
-      "conventional_hydro": 610.32947205,
-      "geothermal": 1.304299,
-      "solar": 1142.75588505,
-      "wind_total": 369.13518872,
-      "biomass": 13.400294445,
-      "waste": 325.831801939
-    },
-    {
       "period": "2023-09",
       "unit": "GWh",
       "total": 25658.375780442,
@@ -2878,12 +2860,12 @@
     {
       "period": "2026-07",
       "unit": "GWh",
-      "total": 27712.178585775,
+      "total": 27712.718385775,
       "pumped_hydro": 233.325,
-      "thermal": 23998.551284859,
+      "thermal": 23999.091084859,
       "coal": 9631.678043397,
       "oil": 380.357882199,
-      "gas": 13986.515359263,
+      "gas": 13987.055159263,
       "nuclear": 0.0,
       "renewable_total": 3480.302300916,
       "conventional_hydro": 650.134956,
@@ -2892,6 +2874,24 @@
       "wind_total": 661.267835,
       "biomass": 25.577585632,
       "waste": 369.629358504
+    },
+    {
+      "period": "2026-08",
+      "unit": "GWh",
+      "total": 27581.160200115,
+      "pumped_hydro": 215.238,
+      "thermal": 24091.182191898,
+      "coal": 9040.391327486,
+      "oil": 390.811681169,
+      "gas": 14659.979183243,
+      "nuclear": 0.0,
+      "renewable_total": 3274.740008217,
+      "conventional_hydro": 642.432246,
+      "geothermal": 2.56071,
+      "solar": 1585.70567812,
+      "wind_total": 673.837059,
+      "biomass": 20.327548833,
+      "waste": 349.876766264
     }
   ],
   "annual_renewable": [
@@ -3177,10 +3177,10 @@
       "download_url": "https://www.moeaea.gov.tw/ECW/populace/opendata/wHandOpenData_File.ashx?set_id=171",
       "frequency": "每月",
       "license": "政府資料開放授權條款－第1版",
-      "sha256": "87847f5d40b52ab27e0e756dea8aff4cb81e8d82bcefd2b40ddd359db4db7a9f",
-      "bytes": 130531,
-      "rows": 235,
-      "latest_record": "2026-07"
+      "sha256": "dfd36faab6b2f163f91b02b258345fec5b2cf7961b7b98c6c844092aab5a01ab",
+      "bytes": 131108,
+      "rows": 236,
+      "latest_record": "2026-08"
     },
     {
       "id": "renewable_annual",
@@ -3201,10 +3201,10 @@
       "download_url": "https://service.taipower.com.tw/data/opendata/apply/file/d693001/001.csv",
       "frequency": "每月",
       "license": "政府資料開放授權條款－第1版",
-      "sha256": "8e4068fd55cd969466d8c0a822db53983451f32daf65377dcc89f8b6236de326",
-      "bytes": 163945,
-      "rows": 1976,
-      "latest_record": "2026-07"
+      "sha256": "1216dce80d376ff29fcd29978e9b73b339ab2639bc1629d32ec0e6da821b7087",
+      "bytes": 188751,
+      "rows": 2041,
+      "latest_record": "2026-08"
     },
     {
       "id": "township_sales_2025",
@@ -3225,7 +3225,7 @@
       {
         "name": "monthly_record_count",
         "status": "passed",
-        "detail": "235 monthly rows"
+        "detail": "236 monthly rows"
       },
       {
         "name": "annual_record_count",
@@ -3235,7 +3235,7 @@
       {
         "name": "monthly_freshness",
         "status": "passed",
-        "detail": "latest 2026-07"
+        "detail": "latest 2026-08"
       },
       {
         "name": "monthly_total_reconciles",
@@ -3260,7 +3260,7 @@
       {
         "name": "taipower_latest_period",
         "status": "passed",
-        "detail": "latest 2026-07"
+        "detail": "latest 2026-08"
       },
       {
         "name": "county_count",

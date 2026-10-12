@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-05T09:36:26Z",
+  "generated_at": "2026-10-12T09:45:14Z",
   "status": "passed",
   "checks": [
     {
       "name": "monthly_record_count",
       "status": "passed",
-      "detail": "235 monthly rows"
+      "detail": "236 monthly rows"
     },
     {
       "name": "annual_record_count",
@@ -15,7 +15,7 @@
     {
       "name": "monthly_freshness",
       "status": "passed",
-      "detail": "latest 2026-07"
+      "detail": "latest 2026-08"
     },
     {
       "name": "monthly_total_reconciles",
@@ -40,7 +40,7 @@
     {
       "name": "taipower_latest_period",
       "status": "passed",
-      "detail": "latest 2026-07"
+      "detail": "latest 2026-08"
     },
     {
       "name": "county_count",
@@ -68,6 +68,6 @@
       "detail": "4416 monthly district rows"
     }
   ],
-  "parquet_rows": 5477,
+  "parquet_rows": 5556,
   "d1_records": 734
 }

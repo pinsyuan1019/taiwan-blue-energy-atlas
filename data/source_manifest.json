@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T09:36:26Z",
+  "generated_at": "2026-10-12T09:45:14Z",
   "sources": [
     {
       "id": "generation_monthly",
@@ -8,10 +8,10 @@
       "download_url": "https://www.moeaea.gov.tw/ECW/populace/opendata/wHandOpenData_File.ashx?set_id=171",
       "frequency": "每月",
       "license": "政府資料開放授權條款－第1版",
-      "sha256": "87847f5d40b52ab27e0e756dea8aff4cb81e8d82bcefd2b40ddd359db4db7a9f",
-      "bytes": 130531,
-      "rows": 235,
-      "latest_record": "2026-07"
+      "sha256": "dfd36faab6b2f163f91b02b258345fec5b2cf7961b7b98c6c844092aab5a01ab",
+      "bytes": 131108,
+      "rows": 236,
+      "latest_record": "2026-08"
     },
     {
       "id": "renewable_annual",
@@ -32,10 +32,10 @@
       "download_url": "https://service.taipower.com.tw/data/opendata/apply/file/d693001/001.csv",
       "frequency": "每月",
       "license": "政府資料開放授權條款－第1版",
-      "sha256": "8e4068fd55cd969466d8c0a822db53983451f32daf65377dcc89f8b6236de326",
-      "bytes": 163945,
-      "rows": 1976,
-      "latest_record": "2026-07"
+      "sha256": "1216dce80d376ff29fcd29978e9b73b339ab2639bc1629d32ec0e6da821b7087",
+      "bytes": 188751,
+      "rows": 2041,
+      "latest_record": "2026-08"
     },
     {
       "id": "township_sales_2025",
