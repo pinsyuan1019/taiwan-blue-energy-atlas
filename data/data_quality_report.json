@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-02T10:00:18Z",
+  "generated_at": "2026-11-09T10:20:50Z",
   "status": "passed",
   "checks": [
     {
       "name": "monthly_record_count",
       "status": "passed",
-      "detail": "236 monthly rows"
+      "detail": "237 monthly rows"
     },
     {
       "name": "annual_record_count",
@@ -15,7 +15,7 @@
     {
       "name": "monthly_freshness",
       "status": "passed",
-      "detail": "latest 2026-08"
+      "detail": "latest 2026-09"
     },
     {
       "name": "monthly_total_reconciles",
@@ -60,7 +60,7 @@
     {
       "name": "county_sales_positive",
       "status": "passed",
-      "detail": "national county sales sum 240486.709928 GWh"
+      "detail": "national county sales sum 238425.966810 GWh"
     },
     {
       "name": "county_selected_rows",
@@ -68,6 +68,6 @@
       "detail": "4416 monthly district rows"
     }
   ],
-  "parquet_rows": 5621,
+  "parquet_rows": 5635,
   "d1_records": 734
 }

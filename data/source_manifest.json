@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T10:00:18Z",
+  "generated_at": "2026-11-09T10:20:50Z",
   "sources": [
     {
       "id": "generation_monthly",
@@ -8,10 +8,10 @@
       "download_url": "https://www.moeaea.gov.tw/ECW/populace/opendata/wHandOpenData_File.ashx?set_id=171",
       "frequency": "每月",
       "license": "政府資料開放授權條款－第1版",
-      "sha256": "dfd36faab6b2f163f91b02b258345fec5b2cf7961b7b98c6c844092aab5a01ab",
-      "bytes": 131108,
-      "rows": 236,
-      "latest_record": "2026-08"
+      "sha256": "35c18499456c2bec2c18c3dcf4582604b8c33639beef70d14b1628724e3d5771",
+      "bytes": 131677,
+      "rows": 237,
+      "latest_record": "2026-09"
     },
     {
       "id": "renewable_annual",
@@ -44,8 +44,8 @@
       "download_url": "https://service.taipower.com.tw/data/opendata/apply/file/d007025/dist_kwh_114.csv",
       "frequency": "每年",
       "license": "政府資料開放授權條款－第1版",
-      "sha256": "af6dd74bf4e409a9119de13ee29afbdfa1c7930dab849fe183fe7096b7c1fa11",
-      "bytes": 7015153,
+      "sha256": "ed00b23cbf4af0529d91583ac85102c1ad9f7381dd46159692c5eed99c9b9f8d",
+      "bytes": 7014742,
       "rows": 123984,
       "latest_record": "2025"
     }
